@@ -59,7 +59,30 @@ DECISION 3: Course Materials
 CURRENT STATUS:
 - Repository structure: COMPLETE ✓
 - Course materials: UPLOADED ✓
-- Next: Select datasets and define project scope
+- Datasets selected: COMPLETE ✓
+- EDA completed: COMPLETE ✓
+- Next: Data preprocessing and model development
+
+EDA KEY FINDINGS:
+-----------------
+Dataset 1 (ENB2012_data.xlsx):
+- 768 samples, 10 features (X1-X8), 2 targets (Y1-heating, Y2-cooling)
+- All numeric, no missing values
+- Strong correlations found:
+  * X1 ↔ X2: -0.99 (highly correlated)
+  * X4 ↔ X5: -0.97 (highly correlated)
+  * Y1 ↔ Y2: 0.98 (targets are highly correlated)
+  * X5 ↔ Y1: 0.89, X5 ↔ Y2: 0.90 (strong predictors)
+- Perfect for regression algorithms
+
+Dataset 2 (energydata_complete.csv):
+- 19,735 samples, 29 features (28 numeric + date)
+- Target: Appliances (energy consumption)
+- No missing values
+- Features: T1-T9 (temperatures), RH_1-RH_9 (humidity), weather data
+- Weaker correlations (max 0.20 with lights)
+- Time-series data (date column)
+- Good for: regression, classification (binary split), clustering, time-series NN
 
 KNOWN ALGORITHMS TO SHOWCASE:
 - Regression (Linear, Polynomial)
