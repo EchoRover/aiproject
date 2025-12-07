@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files (large files - over 10MB)
+# Small datasets (under 10MB) are tracked in git
+# Large datasets should be documented in datasets/README.md with download instructions
+
+# Ignore large CSV files (over 10MB)
+datasets/**/large_*.csv
+datasets/**/*_large.csv
+
+# Ignore any file over 10MB (add manually)
+energydata_complete.csv
+
+# Processed data outputs
+datasets/**/processed/*.csv
+datasets/**/processed/*.xlsx
+
+# Data file formats
+*.h5
+*.pkl
+*.pickle
+*.parquet
+*.feather
+
+# Compressed data
+*.zip
+*.tar.gz
+*.7z
+
+# Models (large files)
+*.pth
+*.pt
+*.h5
+*.onnx
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Reports drafts (keep final versions)
+*_draft.*

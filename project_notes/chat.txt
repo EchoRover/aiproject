@@ -1,0 +1,101 @@
+PROJECT DISCUSSION - AI Final Year Project
+==========================================
+
+BACKGROUND:
+-----------
+- Course covered: Regression, Logistic Regression, Decision Trees, K-means Clustering, Neural Networks, Backpropagation
+- Theory learned: Formulas, MSE (Mean Squared Error), various metrics for model evaluation
+- Goal: Showcase what we learned in a practical project
+
+PROJECT REQUIREMENTS:
+--------------------
+1. Select a dataset
+2. Perform comprehensive analysis
+3. Train models using PyTorch
+4. Produce a PDF report
+5. Create a presentation
+6. Focus on analysis and demonstrating learned concepts
+
+NEXT STEPS TO DISCUSS:
+---------------------
+1. What type of problem interests you? (Classification, Regression, Clustering, or a combination?)
+2. What domain/field? (Healthcare, Finance, Social Media, Computer Vision, NLP, etc.)
+3. Dataset size preferences?
+4. Which algorithms do you want to prioritize showcasing?
+
+SUGGESTED PROJECT STRUCTURE:
+----------------------------
+- Exploratory Data Analysis (EDA)
+- Data preprocessing and feature engineering
+- Apply multiple algorithms (to showcase breadth of learning)
+- Compare models using various metrics
+- Implement neural network with PyTorch
+- Visualizations and insights
+- Detailed report with mathematical foundations
+
+NOTE: This file (chat.txt) will be used to track all important decisions, 
+progress, and information throughout the project.
+
+DECISIONS & PROGRESS:
+--------------------
+
+DECISION 1: Repository Structure ✓
+- Created organized folder structure: datasets, notebooks, models, references, reports, project_notes
+- Set up requirements.txt with PyTorch, scikit-learn, visualization libraries
+- Using Jupyter notebooks (.ipynb files) for analysis and model training
+- LaTeX will be used for final report (managed via Overleaf by student)
+
+DECISION 2: Report Format
+- Final report will be in LaTeX format
+- We will provide content as text for student to format in Overleaf  
+- Will include all formulas, analysis, and findings
+- Presentation will be created separately
+
+DECISION 3: Course Materials
+- 6 PDF files uploaded to references/ folder:
+  * 1.pdf, 2.pdf, 3_new_oct12.pdf, 4DT (1).pdf, 5.pdf, AI_for_Energy_Transition_slides-11.pdf
+- These contain lecture notes on algorithms covered in course
+
+CURRENT STATUS:
+- Repository structure: COMPLETE ✓
+- Course materials: UPLOADED ✓
+- Next: Select datasets and define project scope
+
+KNOWN ALGORITHMS TO SHOWCASE:
+- Regression (Linear, Polynomial)
+- Logistic Regression
+- Decision Trees
+- K-means Clustering
+- Neural Networks (PyTorch)
+- Backpropagation
+- Various metrics: MSE, R², Accuracy, Precision, Recall, F1-Score, etc.
+
+DATASETS SELECTED:
+-------------------
+1. ENB2012_data.xlsx (Energy Efficiency Dataset)
+   - Size: 128KB (tracked in Git ✓)
+   - Type: Regression problem
+   - Target: Heating/Cooling load prediction
+   - Features: Building characteristics
+   - Algorithms: Linear Regression, Decision Trees, Neural Networks, K-means
+   
+2. energydata_complete.csv (Appliance Energy Prediction)
+   - Size: 12MB (NOT in Git - download separately)
+   - Type: Regression + can create classification
+   - Target: Appliance energy consumption
+   - Features: Temperature, humidity, weather, time-series data
+   - Algorithms: All algorithms including time-series analysis
+
+PROJECT STRATEGY:
+- Use BOTH datasets to showcase different approaches
+- Dataset 1: Regression focus with model comparison
+- Dataset 2: Both regression AND classification, plus clustering
+- Apply PyTorch neural networks
+- Compare all models with appropriate metrics
+- This covers ALL course algorithms! ✓
+
+GITIGNORE STRATEGY:
+- Small datasets (<10MB) tracked in Git for easy setup
+- Large datasets (>10MB) excluded, documented in DATA_SOURCES.md
+- energydata_complete.csv requires separate download
+- Team members get download instructions from DATA_SOURCES.md
