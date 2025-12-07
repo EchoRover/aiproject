@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.20)  7 DEC 2025 18:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.20)  7 DEC 2025 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -284,22 +284,7 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count317
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count318
-)
-
-! LaTeX Error: File `listings.sty' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
-
-Enter file name: cd /Users/evantobias/repos/aiproject/reports && pdflatex main.tex
-
-! LaTeX Error: File `cd /Users/evantobias/repos/aiproject/reports && pdflatex main.tex' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: tex)
-
-Enter file name: 
-(/Users/evantobias/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (/Users/evantobias/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
  (/Users/evantobias/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
@@ -315,61 +300,50 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (/Users/evantobias/Library/TinyTeX/texmf-dist/tex/latex/titlesec/titlesec.sty
-Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box57
-\beforetitleunit=\skip55
-\aftertitleunit=\skip56
-\ttl@plus=\dimen193
-\ttl@minus=\dimen194
-\ttl@toksa=\toks28
-\titlewidth=\dimen195
-\titlewidthlast=\dimen196
-\titlewidthfirst=\dimen197
 ) (/Users/evantobias/Library/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
-\f@nch@headwidth=\skip57
-\f@nch@offset@elh=\skip58
-\f@nch@offset@erh=\skip59
-\f@nch@offset@olh=\skip60
-\f@nch@offset@orh=\skip61
-\f@nch@offset@elf=\skip62
-\f@nch@offset@erf=\skip63
-\f@nch@offset@olf=\skip64
-\f@nch@offset@orf=\skip65
-\f@nch@height=\skip66
-\f@nch@footalignment=\skip67
-\f@nch@widthL=\skip68
-\f@nch@widthC=\skip69
-\f@nch@widthR=\skip70
-\@temptokenb=\toks29
+\f@nch@headwidth=\skip55
+\f@nch@offset@elh=\skip56
+\f@nch@offset@erh=\skip57
+\f@nch@offset@olh=\skip58
+\f@nch@offset@orh=\skip59
+\f@nch@offset@elf=\skip60
+\f@nch@offset@erf=\skip61
+\f@nch@offset@olf=\skip62
+\f@nch@offset@orf=\skip63
+\f@nch@height=\skip64
+\f@nch@footalignment=\skip65
+\f@nch@widthL=\skip66
+\f@nch@widthC=\skip67
+\f@nch@widthR=\skip68
+\@temptokenb=\toks28
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 39.
+Package hyperref Info: Option `colorlinks' set `true' on input line 30.
  (/Users/evantobias/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count319
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -410,25 +384,34 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/Users/evantobias/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 48.
+Package hyperref Info: Link coloring ON on input line 39.
+ (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
  (/Users/evantobias/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
  (/Users/evantobias/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 [1
 
-{/Users/evantobias/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-No file main.toc.
+{/Users/evantobias/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[2])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
@@ -441,15 +424,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[2]
-Overfull \hbox (2.25708pt too wide) in paragraph at lines 81--82
+[3]
+Overfull \hbox (2.25708pt too wide) in paragraph at lines 72--73
 []\OT1/cmr/bx/n/12 Features\OT1/cmr/m/n/12 : Tem-per-a-ture (var-i-ous rooms), Hu-mid-ity (var-i-ous rooms), Pres-sure, Wind
  []
 
-<images/01_correlation_heatmaps.png, id=18, 1127.1711pt x 426.1521pt>
+<images/01_correlation_heatmaps.png, id=416, 1127.1711pt x 426.1521pt>
 File: images/01_correlation_heatmaps.png Graphic file (type png)
 <use images/01_correlation_heatmaps.png>
-Package pdftex.def Info: images/01_correlation_heatmaps.png  used on input line 88.
+Package pdftex.def Info: images/01_correlation_heatmaps.png  used on input line 79.
 (pdftex.def)             Requested size: 452.9679pt x 171.25111pt.
 
 
@@ -460,16 +443,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[3]
-Runaway argument?
-{enumerailize clustering to discover natural groupings in consumption\ETC.
-! Paragraph ended before \begin was complete.
-<to be read again> 
-                   \par 
-l.98 
-     
-? 
-
+[4]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -478,16 +452,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4 <./images/01_correlation_heatmaps.png>]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[5]
+[5 <./images/01_correlation_heatmaps.png>]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -497,10 +462,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6]
-<images/05_feature_importance.png, id=76, 715.2321pt x 426.8748pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7]
+<images/05_feature_importance.png, id=459, 715.2321pt x 426.8748pt>
 File: images/05_feature_importance.png Graphic file (type png)
 <use images/05_feature_importance.png>
-Package pdftex.def Info: images/05_feature_importance.png  used on input line 215.
+Package pdftex.def Info: images/05_feature_importance.png  used on input line 210.
 (pdftex.def)             Requested size: 362.37569pt x 216.27678pt.
 
 
@@ -511,16 +485,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7 <./images/05_feature_importance.png>]
-<images/02_regression_comparison.png, id=91, 860.013pt x 426.6339pt>
+[8 <./images/05_feature_importance.png>]
+<images/02_regression_comparison.png, id=470, 860.013pt x 426.6339pt>
 File: images/02_regression_comparison.png Graphic file (type png)
 <use images/02_regression_comparison.png>
-Package pdftex.def Info: images/02_regression_comparison.png  used on input line 254.
+Package pdftex.def Info: images/02_regression_comparison.png  used on input line 249.
 (pdftex.def)             Requested size: 452.9679pt x 224.70874pt.
-<images/03_metrics_comparison.png, id=92, 1148.8521pt x 354.3639pt>
+<images/03_metrics_comparison.png, id=471, 1148.8521pt x 354.3639pt>
 File: images/03_metrics_comparison.png Graphic file (type png)
 <use images/03_metrics_comparison.png>
-Package pdftex.def Info: images/03_metrics_comparison.png  used on input line 261.
+Package pdftex.def Info: images/03_metrics_comparison.png  used on input line 256.
 (pdftex.def)             Requested size: 452.9679pt x 139.71536pt.
 
 
@@ -531,11 +505,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8 <./images/02_regression_comparison.png>]
-<images/04_neural_network_architecture.png, id=104, 715.2321pt x 570.933pt>
+[9 <./images/02_regression_comparison.png>]
+<images/04_neural_network_architecture.png, id=481, 715.2321pt x 570.933pt>
 File: images/04_neural_network_architecture.png Graphic file (type png)
 <use images/04_neural_network_architecture.png>
-Package pdftex.def Info: images/04_neural_network_architecture.png  used on input line 281.
+Package pdftex.def Info: images/04_neural_network_architecture.png  used on input line 276.
 (pdftex.def)             Requested size: 317.07614pt x 253.10173pt.
 
 
@@ -546,7 +520,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9 <./images/03_metrics_comparison.png> <./images/04_neural_network_architecture.png>]
+[10 <./images/03_metrics_comparison.png> <./images/04_neural_network_architecture.png>]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -555,16 +529,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10]
-<images/06_confusion_matrix.png, id=130, 1004.553pt x 354.123pt>
+[11]
+<images/06_confusion_matrix.png, id=500, 1004.553pt x 354.123pt>
 File: images/06_confusion_matrix.png Graphic file (type png)
 <use images/06_confusion_matrix.png>
-Package pdftex.def Info: images/06_confusion_matrix.png  used on input line 362.
+Package pdftex.def Info: images/06_confusion_matrix.png  used on input line 357.
 (pdftex.def)             Requested size: 452.9679pt x 159.67807pt.
-<images/07_roc_curve.png, id=131, 715.473pt x 571.1739pt>
+<images/07_roc_curve.png, id=501, 715.473pt x 571.1739pt>
 File: images/07_roc_curve.png Graphic file (type png)
 <use images/07_roc_curve.png>
-Package pdftex.def Info: images/07_roc_curve.png  used on input line 369.
+Package pdftex.def Info: images/07_roc_curve.png  used on input line 364.
 (pdftex.def)             Requested size: 362.37569pt x 289.29028pt.
 
 
@@ -575,11 +549,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11 <./images/06_confusion_matrix.png>]
-<images/09_classification_metrics.png, id=145, 715.473pt x 426.393pt>
+[12 <./images/06_confusion_matrix.png>]
+<images/09_classification_metrics.png, id=513, 715.473pt x 426.393pt>
 File: images/09_classification_metrics.png Graphic file (type png)
 <use images/09_classification_metrics.png>
-Package pdftex.def Info: images/09_classification_metrics.png  used on input line 376.
+Package pdftex.def Info: images/09_classification_metrics.png  used on input line 371.
 (pdftex.def)             Requested size: 407.66833pt x 242.94893pt.
 
 
@@ -590,11 +564,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12 <./images/07_roc_curve.png> <./images/09_classification_metrics.png>]
-<images/08_clustering_analysis.png, id=156, 1004.3121pt x 354.3639pt>
+[13 <./images/07_roc_curve.png> <./images/09_classification_metrics.png>]
+<images/08_clustering_analysis.png, id=523, 1004.3121pt x 354.3639pt>
 File: images/08_clustering_analysis.png Graphic file (type png)
 <use images/08_clustering_analysis.png>
-Package pdftex.def Info: images/08_clustering_analysis.png  used on input line 420.
+Package pdftex.def Info: images/08_clustering_analysis.png  used on input line 415.
 (pdftex.def)             Requested size: 452.9679pt x 159.82996pt.
 
 
@@ -605,16 +579,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13 <./images/08_clustering_analysis.png>]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[14]
+[14 <./images/08_clustering_analysis.png>]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -624,10 +589,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [15]
-<images/10_overall_summary.png, id=191, 1004.553pt x 570.933pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16]
+<images/10_overall_summary.png, id=549, 1004.553pt x 570.933pt>
 File: images/10_overall_summary.png Graphic file (type png)
 <use images/10_overall_summary.png>
-Package pdftex.def Info: images/10_overall_summary.png  used on input line 511.
+Package pdftex.def Info: images/10_overall_summary.png  used on input line 506.
 (pdftex.def)             Requested size: 452.9679pt x 257.44017pt.
 
 
@@ -638,16 +612,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16 <./images/10_overall_summary.png>]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[17]
+[17 <./images/10_overall_summary.png>]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -684,11 +649,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [21]
-Overfull \hbox (5.58151pt too wide) in paragraph at lines 693--694
-[]\OT1/cmr/bx/n/12 Effective Clas-si-fi-ca-tion\OT1/cmr/m/n/12 : Lo-gis-tic Re-gres-sion achieved 75.65% ac-cu-racy with strong
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -698,6 +658,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [22]
+Overfull \hbox (5.58151pt too wide) in paragraph at lines 688--689
+[]\OT1/cmr/bx/n/12 Effective Clas-si-fi-ca-tion\OT1/cmr/m/n/12 : Lo-gis-tic Re-gres-sion achieved 75.65% ac-cu-racy with strong
+ []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -716,27 +681,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 765--766
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 760--761
 []\OT1/cmr/m/n/12 max[]depth=None, min[]samples[]split=2,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 767--768
+Underfull \hbox (badness 10000) in paragraph at lines 762--763
 []\OT1/cmr/m/n/12 n[]estimators=100, max[]depth=None,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 767--768
+Underfull \hbox (badness 10000) in paragraph at lines 762--763
 \OT1/cmr/m/n/12 min[]samples[]split=2, max[]features='sqrt', ran-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 773--774
+Underfull \hbox (badness 10000) in paragraph at lines 768--769
 []\OT1/cmr/m/n/12 n[]clusters=2, init='k-means++', n[]init=10,
  []
 
 
-Overfull \hbox (11.18556pt too wide) in paragraph at lines 784--797
+Overfull \hbox (11.18556pt too wide) in paragraph at lines 779--792
  [][] 
  []
 
@@ -749,7 +723,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[25]
+[26]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -758,7 +732,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26] (./main.aux)
+[27] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
@@ -767,28 +741,22 @@ L3 programming layer <2025-08-13>
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  0FE1B352F1CC117A98CAC40A05067194;12560.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 0FE1B352F1CC117A98CAC40A05067194;12560.
  ) 
 Here is how much of TeX's memory you used:
- 12797 strings out of 469781
- 203268 string characters out of 5481047
- 623006 words of memory out of 5000000
- 40862 multiletter control sequences out of 15000+600000
+ 12591 strings out of 469781
+ 200621 string characters out of 5481047
+ 619082 words of memory out of 5000000
+ 40644 multiletter control sequences out of 15000+600000
  640331 words of font info for 89 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,12n,79p,909b,541s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,909b,539s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/evantobias/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcbx1200.600pk> </Users/evantobias/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/evantobias/Library/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></Users/evantobias/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (26 pages, 1939926 bytes).
+Output written on main.pdf (27 pages, 1950374 bytes).
 PDF statistics:
- 424 PDF objects out of 1000 (max. 8388607)
- 338 compressed objects within 4 object streams
- 181 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 752 PDF objects out of 1000 (max. 8388607)
+ 662 compressed objects within 7 object streams
+ 189 named destinations out of 1000 (max. 500000)
+ 675 words of extra memory for PDF output out of 10000 (max. 10000000)
 
