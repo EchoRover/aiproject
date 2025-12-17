@@ -22,10 +22,12 @@ datasets/**/*_large.csv
 
 # Ignore any file over 10MB (add manually)
 energydata_complete.csv
+household_power_consumption.txt
 
 # Processed data outputs
 datasets/**/processed/*.csv
 datasets/**/processed/*.xlsx
+datasets/**/processed/*.txt
 
 # Data file formats
 *.h5
