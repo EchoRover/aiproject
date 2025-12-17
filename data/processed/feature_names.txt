@@ -17,10 +17,6 @@ PPE
 age
 sex
 test_time
-total_jitter
 total_shimmer
 voice_quality
-jitter_shimmer_interaction
-test_months
 age_time_interaction
-noise_ratio
