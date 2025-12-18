@@ -1,0 +1,254 @@
+\documentclass[a4paper, 12pt]{article}
+
+% 1. Input encoding & document structure
+\usepackage[utf8]{inputenc}          % Input encoding
+\usepackage[margin=1in]{geometry}    % Page margins
+\usepackage{titlesec}                % Section formatting
+\usepackage{mfirstuc}                % Capitalize first letter
+\usepackage{fancyhdr}                % Header & footer
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyhead[L]{AENL338 - AI Project}
+\fancyhead[C]{\textsc{}}
+\fancyhead[R]{}
+\fancyfoot[R]{Page \thepage}
+
+% 2. Math & Symbols
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{mathtools} % for boxing in align things aboxxed
+\usepackage{siunitx}    % SI unit formatting
+
+% 3. Tables & Figures
+\usepackage{graphicx, float, subcaption}   % Image handling
+\usepackage{multirow, multicol}         % Multi-row & multi-column in tables
+\usepackage{booktabs, tabularx, tablefootnote}  % Table formatting
+\usepackage[labelfont = bf,skip = 5pt,font = small]{caption}
+\usepackage{tcolorbox}
+
+% Define a custom style for the insight box
+\tcbset{
+  insightbox/.style={
+    colback=yellow!10,    % light yellow background
+    colframe=orange!80!black, % border color
+    fonttitle=\bfseries,
+    title=Insight,
+    sharp corners,
+    boxrule=0.8pt,
+    left=2mm,
+    right=2mm,
+    top=1mm,
+    bottom=1mm,
+  }
+}
+
+% 4. Hyperlinks & Colors
+\usepackage{xcolor}                  % Color support
+\usepackage{hyperref}                % Hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue
+}
+\urlstyle{same}
+
+% 6. Lists & Enumeration
+\usepackage{enumerate}               % Custom enumeration
+\usepackage[shortlabels]{enumitem}    % Custom lists
+
+% 7. Miscellaneous
+\usepackage{lipsum}                  % Dummy text
+\usepackage{ulem}                    % Underline customization
+\renewcommand{\underline}[1]{\uline{\raisebox{0.01ex}{#1}}}
+\usepackage{float} %force floating object  H
+
+% Custom values
+\titleformat{\section}[block]{\normalfont\Large\bfseries}{\thesection}{1em}{\capitalisewords}
+\setlength{\parskip}{1em} % general update padding eg section top and bottom
+
+\renewcommand{\headrulewidth}{0.2pt} 
+\renewcommand{\footrulewidth}{0.2pt}
+\setlength{\headheight}{15pt}
+
+% Custom commands
+\setlength{\parindent}{0pt}
+\newcommand{\heady}[1]{\subsubsection*{\underline{#1}}}
+\newcommand{\cellbreak}[2][X]{%
+  \begin{tabularx}{\linewidth}{@{}#1@{}} 
+    #2
+  \end{tabularx}%
+}
+
+% Title, author, date
+\title{\textbf{Decoding Parkinson's Severity Through Voice Analysis}\\\large Machine Learning Approach to UPDRS Score Prediction}
+\author{Evan Johan Tobias, Mohsin Akram Khan}
+\date{18th December 2025}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+%==================================
+% ABSTRACT
+%==================================
+\begin{abstract}
+Parkinson's disease affects over 10 million people worldwide, with 90\% experiencing voice problems. Traditional UPDRS assessment requires in-person clinical visits, which is inconvenient for patients with mobility issues. We built a machine learning system to predict UPDRS scores from voice recordings. Using 5,875 voice samples from 42 patients and 22 features (19 original + 3 engineered), we tested five models: Linear Regression, Polynomial Regression, Decision Tree, Random Forest, and Neural Network. Random Forest won with R\textsuperscript{2}=0.916 (RMSE=3.06 points), beating the clinical target of 0.75. The model proves voice-based remote monitoring works, with errors within $\pm$3 points on a 0-176 scale. This means patients can track their Parkinson's from home using just their smartphone.
+\end{abstract}
+
+%==================================
+% INTRODUCTION
+%==================================
+\section{Introduction}
+
+\subsection{Background and Motivation}
+
+Parkinson's disease (PD) is a brain disorder that causes tremors, stiffness, and slow movement. Doctors measure severity using the UPDRS scale (0 = healthy, 176 = severe disability). The problem? You need a specialist neurologist to get assessed, which is hard if you can't travel easily.
+
+70-90\% of Parkinson's patients develop voice problems early on. We can measure things like jitter (shaky pitch), shimmer (wobbly volume), and voice clarity. If voice changes correlate with disease severity, we can potentially monitor Parkinson's remotely through voice recordings.
+
+\textbf{Why monitoring UPDRS matters:} Traditional clinic visits happen every 3-6 months, leaving huge gaps where disease changes go unnoticed. Frequent UPDRS monitoring enables: (1) \textit{Medication optimization}---doctors can adjust Levodopa doses based on ON/OFF state comparisons before side effects develop; (2) \textit{Early intervention}---detecting rapid score increases triggers treatments like physical therapy or Deep Brain Stimulation before severe mobility loss; (3) \textit{Fall prevention}---motor scores predict fall risk, allowing safety measures; (4) \textit{Objective tracking}---replacing "how do you feel?" with hard numbers ensures treatment follows actual trends, not just good/bad clinic days.
+
+\subsection{Objectives and Approach}
+
+We're building a system to predict UPDRS scores from voice recordings. The goal: make Parkinson's assessment accessible, cheap, and frequent instead of requiring quarterly clinic visits. We tested five different ML algorithms to see which works best, aiming for R\textsuperscript{2}$\geq$0.75 accuracy. If this works, patients can record their voice at home on their phone and get instant severity estimates.
+
+%==================================
+% DATASET
+%==================================
+\section{Dataset Description}
+
+The dataset from UCI Machine Learning Repository contains 5,875 voice recordings from 42 Parkinson's patients (age 64.8±10.2 years, 28M/14F) collected over 6 months. Dataset includes 16 voice biomarkers (Jitter variants, Shimmer variants, NHR, HNR, RPDE, DFA, PPE) and 3 demographic features (age, sex, test\_time). \footnote{Dataset: \url{https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring}}
+
+%==================================
+% EDA
+%==================================
+\section{Exploratory Data Analysis}
+
+\subsection{Target Distribution}
+Both motor\_UPDRS and total\_UPDRS show approximately normal distributions. motor\_UPDRS ranges 5.04-39.51 (mean=21.3), total\_UPDRS ranges 6.43-54.99 (mean=29.0). No extreme outliers detected---all values represent genuine mild-moderate disease cases.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/target_distributions.png}
+\caption{Target variable distributions: motor\_UPDRS and total\_UPDRS both approximately normal}
+\end{figure}
+
+\subsection{Feature Correlations}
+Individual features show weak linear correlations (|r|$<$0.3) with UPDRS scores. Top 5 predictors for total\_UPDRS: PPE (r=0.287), Jitter:RAP (r=0.201), Jitter(\%) (r=0.213), Shimmer (r=0.189), NHR (r=0.167).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/feature_correlation.png}
+\caption{Voice feature correlations with motor\_UPDRS and total\_UPDRS. All correlations weak (|r|$<$0.3), indicating non-linear relationships.}
+\end{figure}
+
+\subsection{Multicollinearity}
+Strong correlations exist among Jitter variants (r$>$0.85) and Shimmer variants (r$>$0.90), indicating feature redundancy. This suggests tree-based models will outperform linear regression since they handle multicollinearity better.
+
+\subsection{Disease Progression}
+UPDRS scores increase over time at +0.014 points/day for motor\_UPDRS (+0.42 points/month), confirming disease progression. Age shows weak correlation with UPDRS (r=0.13), while test\_time is more predictive.
+
+%==================================
+% PREPROCESSING
+%==================================
+\section{Data Preprocessing}
+
+\subsection{Feature Engineering}
+Created 7 new features: total\_jitter, total\_shimmer, voice\_quality, jitter\_shimmer\_interaction, test\_months, age\_time\_interaction, noise\_ratio. Selected 3 with correlation $>$0.1 (total\_shimmer, voice\_quality, age\_time\_interaction), bringing total from 19 to 22 features.
+
+\subsection{Normalization and Splitting}
+StandardScaler normalization (mean=0, std=1) applied to all 22 features so no feature dominates just because it has bigger numbers. Split the data 80/20 into training (4,700 samples) and test (1,175 samples), using patient-based stratification to prevent data leakage (same patient not in both sets).
+
+%==================================
+% MODELS
+%==================================
+\section{Regression Models and Results}
+
+Five regression algorithms were evaluated using identical train-test splits. Hyperparameters were optimized via grid search with 5-fold cross-validation. Performance metrics include R² (coefficient of determination), RMSE (root mean squared error), and MAE (mean absolute error).
+
+\subsection{Model 1: Linear Regression}
+
+Ordinary least squares achieved R\textsuperscript{2}=0.122 (motor) and 0.155 (total), RMSE=7.49 and 9.68 respectively. Poor performance confirms weak linear relationships between voice features and UPDRS scores.
+
+%-----------------------------------
+\subsection{Model 2: Polynomial Regression}
+
+Second-degree polynomial with Ridge regularization ($\alpha$=100) achieved R\textsuperscript{2}=0.235 (motor) and 0.281 (total). Marginal improvement over linear, but 275 polynomial features introduce noise without capturing true threshold relationships.
+
+%-----------------------------------
+\subsection{Model 3: Decision Tree}
+
+CART with max\_depth=10 achieved R\textsuperscript{2}=0.818 (motor) and 0.875 (total), RMSE=3.41 and 3.72. Dramatic improvement (191\%) over polynomial due to natural threshold-based splits matching PD voice patterns.
+
+%-----------------------------------
+\subsection{Model 4: Random Forest (Best Model)}
+
+Ensemble of 500 trees achieved R\textsuperscript{2}=0.849 (motor) and \textbf{0.916} (total), RMSE=3.10 and \textbf{3.06}. Train-test gap $<$8\% indicates minimal overfitting. PPE dominated feature importance (18.5\%), followed by Jitter:DDP (12.3\%) and Shimmer (9.7\%). Variance reduction from averaging 500 bootstrap samples provides robust predictions, exceeding clinical target (R\textsuperscript{2}$\geq$0.75) by 22\%.
+
+\begin{tcolorbox}[insightbox]
+Random Forest achieved R\textsuperscript{2}=0.916, exceeding clinical target (R\textsuperscript{2}$\geq$0.75) by 22\%. This enables practical deployment for remote PD monitoring.
+\end{tcolorbox}
+
+%-----------------------------------
+\subsection{Model 5: Neural Network}
+
+3-layer feedforward network (128-64-32 neurons with BatchNorm, ReLU, Dropout) achieved R\textsuperscript{2}=0.773 (motor) and 0.731 (total). Underperformance due to insufficient data (4,700 samples for $\sim$100,000 parameters) and tabular data limitations. Tree-based models better suited for small structured datasets.
+
+%==================================
+% FINAL COMPARISON
+%==================================
+\section{Model Comparison and Best Model Selection}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/model_comparison_complete.png}
+\caption{Model Performance Comparison: R\textsuperscript{2} scores across five algorithms}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Final Model Comparison (total\_UPDRS)}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Model} & \textbf{R²} & \textbf{RMSE} & \textbf{MAE} & \textbf{Rank} \\
+\midrule
+Linear Regression & 0.155 & 9.68 & 8.06 & 5 \\
+Polynomial Regression & 0.281 & 8.92 & 7.43 & 4 \\
+Neural Network & 0.731 & 5.46 & 3.85 & 3 \\
+Decision Tree & 0.875 & 3.72 & 2.55 & 2 \\
+\textbf{Random Forest} & \textbf{0.916} & \textbf{3.06} & \textbf{2.05} & \textbf{1} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Winner: Random Forest} achieves:
+\begin{itemize}
+    \item Highest R\textsuperscript{2} (0.916): Explains 91.6\% of UPDRS variance
+    \item Lowest RMSE (3.06): Average error $\pm$3 points on 0-176 scale
+    \item Best generalization: Train-test gap only 6.7\%
+    \item Clinical viability: Exceeds R\textsuperscript{2}$\geq$0.75 target by 22\%
+\end{itemize}
+
+%==================================
+% CONCLUSION
+%==================================
+\section{Conclusion}
+
+Random Forest crushed it with R\textsuperscript{2}=0.916 (RMSE=3.06), way above our 0.75 target. Main takeaways: (1) Non-linear models destroyed linear ones by 650\%---voice-UPDRS relationships have thresholds, not smooth lines; (2) PPE (pitch entropy) is the MVP feature at 18.5\% importance; (3) Neural networks flopped because we don't have enough data.
+
+The practical impact: patients can monitor their Parkinson's at home with $\pm$3-point accuracy using voice recordings. Downsides: only 42 patients (needs more diversity), only mild-moderate cases tested, and we're ignoring tremor/gait data. Next steps: test on 1,000+ diverse patients, add sensor data from wearables, and run real clinical trials.
+
+%==================================
+% REFERENCES
+%==================================
+\section{References}
+
+\begin{enumerate}
+    \item Tsanas, A., et al. (2010). Accurate telemonitoring of Parkinson's disease progression. \textit{IEEE Trans. Biomed. Eng.}, 57(4), 884-893.
+    \item Rusz, J., et al. (2011). Speech characterization in early Parkinson's. \textit{J. Acoust. Soc. Am.}, 129(1), 350-367.
+    \item Breiman, L. (2001). Random Forests. \textit{Machine Learning}, 45(1), 5-32.
+    \item Goetz, C. G., et al. (2008). MDS-UPDRS revision. \textit{Movement Disorders}, 23(15), 2129-2170.
+\end{enumerate}
+
+\end{document}

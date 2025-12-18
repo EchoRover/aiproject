@@ -1,0 +1,125 @@
+\documentclass[a4paper, 12pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+% Title
+\title{\textbf{Code Documentation}\\\large Parkinson's Disease UPDRS Prediction from Voice Analysis}
+\author{Evan Johan Tobias}
+\date{December 2025}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\section*{Repository Access}
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
+\textbf{GitHub Repository:} \url{https://github.com/EchoRover/aiproject}
+\end{tcolorbox}
+
+The complete source code, datasets, notebooks, and figures for this project are available in the above repository.
+
+\section*{Project Structure}
+
+\subsection*{Root Directory}
+\begin{itemize}[leftmargin=*]
+    \item \texttt{README.md} -- Project overview and setup instructions
+    \item \texttt{requirements.txt} -- Python dependencies
+    \item \texttt{.venv/} -- Virtual environment (not tracked in git)
+\end{itemize}
+
+\subsection*{Datasets (\texttt{datasets/})}
+\begin{itemize}[leftmargin=*]
+    \item \texttt{parkinsons\_updrs.data} -- Original UCI dataset (5,875 recordings)
+\end{itemize}
+
+\subsection*{Notebooks (\texttt{notebooks/parkinsons/})}
+Analysis pipeline executed in sequential order:
+
+\begin{enumerate}
+    \item \texttt{01\_parkinsons\_eda.ipynb} -- Exploratory Data Analysis
+    \begin{itemize}
+        \item Target distributions, feature correlations, multicollinearity checks
+        \item Disease progression analysis, demographics
+    \end{itemize}
+    
+    \item \texttt{02\_parkinsons\_preprocessing.ipynb} -- Data Preprocessing
+    \begin{itemize}
+        \item Feature engineering (7 features created, 3 retained)
+        \item StandardScaler normalization
+        \item 80/20 train/test split with patient stratification
+    \end{itemize}
+    
+    \item \texttt{03\_parkinsons\_regression.ipynb} -- Model Training \& Evaluation
+    \begin{itemize}
+        \item 5 models: Linear, Polynomial, Decision Tree, Random Forest, Neural Network
+        \item Hyperparameter tuning via GridSearchCV
+        \item Performance comparison (R\textsuperscript{2}, RMSE, MAE)
+    \end{itemize}
+\end{enumerate}
+
+\subsection*{Figures (\texttt{figures/})}
+\begin{itemize}[leftmargin=*]
+    \item \texttt{target\_distributions.png} -- UPDRS score distributions
+    \item \texttt{feature\_correlation.png} -- Voice feature correlations
+    \item \texttt{model\_comparison\_complete.png} -- Model performance comparison
+    \item \texttt{random\_forest\_complete.png} -- Best model analysis
+    \item And 6+ additional visualization figures
+\end{itemize}
+
+\subsection*{Archive (\texttt{archive/})}
+Previous project iterations and alternative analyses (not part of final submission).
+
+\section*{Reproducing Results}
+
+\subsection*{Setup}
+\begin{verbatim}
+# Clone repository
+git clone https://github.com/EchoRover/aiproject.git
+cd aiproject
+
+# Create virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+\end{verbatim}
+
+\subsection*{Run Analysis}
+Execute notebooks in order:
+\begin{verbatim}
+jupyter notebook notebooks/parkinsons/01_parkinsons_eda.ipynb
+jupyter notebook notebooks/parkinsons/02_parkinsons_preprocessing.ipynb
+jupyter notebook notebooks/parkinsons/03_parkinsons_regression.ipynb
+\end{verbatim}
+
+\subsection*{Key Dependencies}
+\begin{itemize}[leftmargin=*]
+    \item Python 3.8+
+    \item pandas, numpy -- Data manipulation
+    \item scikit-learn -- ML models, preprocessing
+    \item matplotlib, seaborn -- Visualization
+    \item torch -- Neural network implementation
+\end{itemize}
+
+\section*{Notes}
+\begin{itemize}[leftmargin=*]
+    \item Random seed set to 42 (chosen because dataset has 42 patients) for reproducibility
+    \item Results match those reported in technical paper
+    \item Dataset source: \url{https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring}
+\end{itemize}
+
+\end{document}
