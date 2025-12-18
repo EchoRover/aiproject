@@ -86,9 +86,9 @@ Install all: `pip install -r requirements.txt`
 - **Code Documentation:** `submission/code_documentation.tex`
 - **Notebooks:** Fully commented with step-by-step explanations
 
-## 👨‍💻 Author
+## 👨‍💻 Authors
 
-**Evan Johan Tobias**  
+**Evan Johan Tobias & Mohsin Akram Khan**  
 AENL338 - AI Project  
 December 2025
 
